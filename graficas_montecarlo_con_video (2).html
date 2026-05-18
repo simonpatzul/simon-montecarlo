@@ -29,9 +29,6 @@
 <div style="position: relative; width: 100%; height: 240px;">
   <canvas id="chart1" role="img" aria-label="Histograma de distribución de nichos requeridos según simulación Monte Carlo. La mayoría de iteraciones converge entre 130 y 150 nichos, con pico en 140.">Distribución Monte Carlo: pico en 140 nichos, rango óptimo 130-150.</canvas>
 </div>
-<div style="margin-top: 10px; font-size: 13px; color: var(--color-text-secondary); line-height: 1.5;">
-  Cada barra representa cuántas de las 5.000 simulaciones — variando OEE de la máquina, dispersión del picker, perfil de llegada y mix MULTI/MONO — terminaron necesitando esa cantidad de nichos para procesar las 10.000 unidades del turno. La distribución se concentra alrededor de <strong>140 nichos</strong>, lo que confirma que el rango sombreado (130–150) cubre la mayoría de los escenarios operativos esperados.
-</div>
 
 <div style="border-top: 0.5px solid var(--color-border-tertiary); margin: 1.5rem 0;"></div>
 
@@ -43,9 +40,6 @@
 <div style="position: relative; width: 100%; height: 200px;">
   <canvas id="chart2" role="img" aria-label="Gráfica de convergencia del modelo Monte Carlo. La media acumulada se estabiliza alrededor de 140 nichos después de aproximadamente 1000 iteraciones.">Convergencia estable en 140 nichos desde ~1000 iteraciones.</canvas>
 </div>
-<div style="margin-top: 10px; font-size: 13px; color: var(--color-text-secondary); line-height: 1.5;">
-  La media acumulada se estabiliza alrededor de los <strong>140 nichos</strong> a partir de aproximadamente 1.000 iteraciones y se mantiene plana hasta las 5.000. Esto valida que el tamaño muestral del Monte Carlo es suficiente: agregar más iteraciones no cambia el resultado, así que el modelo ya capturó la variabilidad real de los 62 escenarios sin ruido residual.
-</div>
 
 <div style="border-top: 0.5px solid var(--color-border-tertiary); margin: 1.5rem 0;"></div>
 
@@ -55,9 +49,6 @@
 </div>
 <div style="position: relative; width: 100%; height: 220px;">
   <canvas id="chart3" role="img" aria-label="Gráfica de barras horizontales mostrando nichos requeridos según nivel de servicio. A 95% se necesitan 140 nichos, a 99% se necesitan 150 nichos.">Nichos por nivel de servicio: 80% → 120, 85% → 125, 90% → 130, 95% → 140, 99% → 150.</canvas>
-</div>
-<div style="margin-top: 10px; font-size: 13px; color: var(--color-text-secondary); line-height: 1.5;">
-  Cada nivel de servicio responde a la pregunta: <em>¿qué tantos turnos quiero cubrir sin desbordes?</em> Con <strong>140 nichos (p95)</strong> se cubren 95 de cada 100 turnos simulados; con <strong>150 nichos (p99)</strong> se cubre el 99%, dejando solo escenarios extremos sin atender. Aplicando el criterio del modelo (≤80 nichos → 1 máquina, 81–160 → 2, 161–240 → 3), el dimensionamiento se resuelve con <strong>2 máquinas Sure Sort X de 80 nichos cada una</strong>.
 </div>
 
 <div style="border-top: 0.5px solid var(--color-border-tertiary); margin: 1.5rem 0;"></div>
